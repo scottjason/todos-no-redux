@@ -1,0 +1,241 @@
+body,
+html {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 62.5%;
+  background-color: #000;
+  background: #131532;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+}
+textarea,
+select,
+input,
+button {
+  outline: none;
+  border: none;
+}
+p,
+a,
+h1,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.appContainer {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: block;
+  with: 100%;
+  height: 100%;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: column;
+  width: 100%;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.container .row {
+  position: relative;
+  display: flex;
+  color: $gray-dark;
+  box-sizing: border-box;
+  margin: 10px 0;
+  background-color: #2d3152;
+  white-space: normal;
+  border-radius: 10px;
+}
+.container .row.push-down {
+  margin-top: 20px;
+}
+.container .row.new {
+  margin-top: 20px;
+}
+.container .row.no-todos {
+  justify-content: center;
+  font-size: 1.6rem;
+  background-color: #131532;
+  color: #fff;
+}
+.container .row .textarea {
+  position: relative;
+  display: flex;
+  resize: none;
+  color: rgba(225,225,225,0.8);
+  height: auto;
+  padding: 20px 77px 20px 20px;
+  width: 100%;
+  overflow: hidden;
+  white-space: normal;
+  background-color: transparent;
+  box-sizing: border-box;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transition: background-color 275ms linear, box-shadow 275ms linear, color 275ms linear;
+}
+.container .row .textarea.write-enabled {
+  color: #fff;
+  background-color: #131532;
+  box-shadow: 0 2px 18px rgba(225,225,225,0.25), 0 2px 18px rgba(0,0,0,0.22);
+}
+.container .row .textarea.write-enabled.new {
+  padding-top: 10px;
+}
+.container .row .textarea:first-child {
+  margin: 0;
+}
+.container .row .textarea .description {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 300;
+  min-height: 60px;
+}
+.container .row .icon-pencil,
+.container .row .icon-checkmark,
+.container .row .icon-bin {
+  font-size: 18px;
+  position: absolute;
+  right: 20px;
+  color: rgba(225,225,225,0.8);
+  cursor: pointer;
+}
+.container .row .icon-checkmark {
+  top: 15px;
+}
+.container .row .icon-pencil {
+  font-size: 15px;
+  top: 16px;
+  right: 49px;
+}
+.container .row .icon-bin {
+  bottom: 15px;
+  font-size: 16px;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  max-width: 768px;
+  margin: 0 auto;
+}
+nav .inner {
+  position: fixed;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  max-width: 768px;
+  padding-bottom: 15px;
+  background-color: #131532;
+}
+nav .inner .section-left,
+nav .inner .section-right {
+  display: flex;
+  width: 50%;
+  align-items: flex-end;
+}
+nav .inner .section-left .tab-copy,
+nav .inner .section-right .tab-copy {
+  color: #fff;
+  transition: color 275ms linear;
+  cursor: pointer;
+}
+nav .inner .section-left .tab-copy:hover,
+nav .inner .section-right .tab-copy:hover {
+  color: #52bea5;
+}
+nav .inner .section-left .tab-copy.active,
+nav .inner .section-right .tab-copy.active {
+  color: #52bea5;
+  cursor: default;
+}
+nav .inner .section-left .tab-copy {
+  margin-left: 8px;
+}
+nav .inner .section-right {
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+nav .inner .section-right .tab-copy {
+  margin-right: 8px;
+}
+nav .inner .section-right span {
+  margin: 0 10px;
+  color: rgba(225,225,225,0.4);
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../vendor/fonts/icomoon.eot?u5vr2c");
+  src: url("../vendor/fonts/icomoon.eot?u5vr2c#iefix") format('embedded-opentype'), url("../vendor/fonts/icomoon.ttf?u5vr2c") format('truetype'), url("../vendor/fonts/icomoon.woff?u5vr2c") format('woff'), url("../vendor/fonts/icomoon.svg?u5vr2c#icomoon") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+/* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-pencil:before {
+  content: "\e905";
+}
+.icon-pencil2:before {
+  content: "\e906";
+}
+.icon-file-empty:before {
+  content: "\e924";
+}
+.icon-history:before {
+  content: "\e94d";
+}
+.icon-alarm:before {
+  content: "\e950";
+}
+.icon-floppy-disk:before {
+  content: "\e962";
+}
+.icon-database:before {
+  content: "\e964";
+}
+.icon-undo:before {
+  content: "\e965";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-bin2:before {
+  content: "\e9ad";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkmark2:before {
+  content: "\ea11";
+}
