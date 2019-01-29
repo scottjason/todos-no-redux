@@ -1,0 +1,49 @@
+$bright-blue = #0071dc
+$light-blue = #2D3152
+$dark-blue = #131532
+$green-accent = #52bea5
+
+nav
+  position relative
+  width 100%;
+  height 100px
+  max-width 768px
+  margin 0 auto
+  .inner
+    position fixed
+    transition: 0.2s;
+    display: flex;
+    flex-direction row
+    top 0
+    width 100%
+    height 100px
+    z-index 1
+    max-width 768px
+    padding-bottom 15px
+    background-color $dark-blue
+    .section-left,
+    .section-right
+      display flex
+      width 50%
+      align-items flex-end
+      .tab-copy
+        color white
+        transition color 275ms linear
+        cursor pointer
+        &:hover
+          color $green-accent
+        &.active
+          color $green-accent
+          cursor default
+    .section-left
+      .tab-copy
+        margin-left 8px
+    .section-right
+      box-sizing border-box
+      justify-content flex-end
+      .tab-copy
+        margin-right 8px
+      span
+        margin 0 10px
+        color rgba(225, 225, 225, .4)
+

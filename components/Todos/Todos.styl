@@ -1,0 +1,78 @@
+$bright-blue = #0071dc
+$light-blue = #2D3152
+$dark-blue = #131532
+$green-accent = #52bea5
+
+.container
+  position relative
+  display flex
+  flex-direction column
+  justify-content column
+  width 100%;
+  max-width 768px
+  margin 0 auto
+  .row
+    position relative
+    display flex
+    color $gray-dark
+    box-sizing border-box
+    margin 10px 0
+    background-color $light-blue
+    white-space: normal;
+    border-radius 10px
+    &.push-down
+      margin-top 20px
+    &.new
+      margin-top 20px
+    &.no-todos
+      justify-content center
+      font-size 1.6rem
+      background-color $dark-blue
+      color white
+    .textarea
+      position relative
+      display flex
+      resize: none;
+      color rgba(225, 225, 225, .8)
+      height: auto
+      padding: 20px 77px 20px 20px
+      width: 100%
+      overflow hidden
+      white-space: normal
+      background-color transparent
+      box-sizing border-box
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      transition background-color 275ms linear, box-shadow 275ms linear, color 275ms linear
+      &.write-enabled
+        color white
+        background-color: $dark-blue
+        box-shadow: 0 2px 18px rgba(225,225,225,.25), 0 2px 18px rgba(0,0,0,0.22);
+        &.new
+          padding-top 10px
+      &:first-child
+        margin 0
+      .description
+        color: #fff;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        font-weight: 300;
+        min-height: 60px;
+    .icon-pencil,
+    .icon-checkmark,
+    .icon-bin
+      font-size 18px
+      position absolute
+      right 20px
+      color rgba(225, 225, 225, .8)
+      cursor pointer
+    .icon-checkmark
+      top 15px
+    .icon-pencil
+      font-size 15px
+      top 16px
+      right 49px
+    .icon-bin
+      bottom 15px
+      font-size 16px
+
+
