@@ -1,5 +1,5 @@
 
-# Versal Take-Home
+# Todos No Redux
 
 ### Built w/
 - React 16, ES6, Browserify, Stylus et al
@@ -31,7 +31,7 @@ npm run test
 
 ### Summary
 
-Generally speaking, this is a react app focused on unidirectional data flow, state management and UI.
+This is a react app focused on unidirectional data flow, state management and UI.
 
 State is shared throughout the components via HOCs, or higher order components.
 
